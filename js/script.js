@@ -5,9 +5,11 @@ const alert = document.getElementById('alert')
 const table = document.getElementById('tbody')
 let todos = []
 let todo_render = []
+
 btnAdd.addEventListener('click', ()=>{
     addToDo()
 })
+
 class Task {
     constructor(title, des, key){
         this.title = title
