@@ -53,10 +53,10 @@ function renderTodos(key, value){
         <td>${value.title}</td>
         <td>${value.des}</td>
         <td class="text-center align-middle">
-            <button type="button" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button type="button" class="btn btn-warning"onclick="edit(${key})"><i class="fa-solid fa-pen-to-square"></i></button>
         </td>
         <td class="text-center align-middle">
-            <button type="button" class="btn btn-success"><i class="fa-solid fa-check" style="color: #000000;" onclick="complete(${key})"></i></button>
+            <button type="button" class="btn btn-success"onclick="complete(${key})"><i class="fa-solid fa-check" style="color: #000000;"></i></button>
         </td>  
     `
     table.appendChild(row)
@@ -68,6 +68,14 @@ function complete(key){
         document.getElementById(key).remove()
         localStorage.removeItem(key)
     }
+}
+
+function edit(key){
+    
+    data = JSON.parse(localStorage.getItem(key))
+    title.value = data.title
+    des.value = data.des
+    
 }
 
 
