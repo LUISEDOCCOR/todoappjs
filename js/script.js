@@ -75,7 +75,8 @@ function edit(key){
     data = JSON.parse(localStorage.getItem(key))
     title.value = data.title
     des.value = data.des
-    
+    document.getElementById(key).remove()
+    localStorage.removeItem(key)
 }
 
 
