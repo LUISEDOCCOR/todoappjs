@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/91c956bb82.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">To Do List</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home
+                            <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="alert" class="d-none">
+            <div class="d-flex justify-content-center mt-3">
+                <div class="alert alert-dismissible alert-danger text-center" id="alerta">
+                    Fill in all the fields
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="d-flex justify-content-center mt-3">
+            <table class="table table-hover " id="add_to_do">
+                <thead>
+                    <tr class="table-dark text-center">
+                        <td colspan="3">Add To Do</td>
+                    </tr>
+                </thead>
+               <tbody>
+                    <tr class="table-dark">
+                        <td class="w-25">
+                            <input type="text" class="form-control " id="title" placeholder="Title">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control w-100" id="des" placeholder="Description">
+                        </td>
+                        <td id="center">
+                            <button id="add" type="Add" class="btn btn-success">Add</button>
+                        </td>
+                    </tr>
+               </tbody>
+            </table>
+        </div> 
+        <div id="view_to_do" class="d-flex justify-content-center mt-5">
+           <table id="todos"  class="table table-hover">
+                <thead>
+                    <tr>
+                        <td class="text-center mb-3">Title</td>
+                        <td class="text-center mb-3">Description</td>
+                        <td class="text-center mb-3">Edit</td>
+                        <td class="text-center mb-3">Completed</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+           </table>
+        </div>       
+    </main>
+</body>
+</html>

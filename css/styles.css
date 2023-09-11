@@ -1,0 +1,19 @@
+#center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#alerta{
+    width: 50vw;
+}
+#add_to_do, #todos{
+    width: 70vw;
+} 
+@media screen and (max-width: 500px) {
+    #add_to_do, #todos{
+        width: 95vw;
+    }
+    #alerta{
+        width: 70vw;
+    }
+}
